@@ -1,6 +1,18 @@
+/target
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+*/target/*
+.metadata/*
+*/.settings/*
+.*/*
+.classpath
+*.tmp
+*.err
+.project
+*.class
+!.gitignore
+*/.externalToolBuilders/*
