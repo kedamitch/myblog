@@ -16,3 +16,4 @@
 *.class
 !.gitignore
 */.externalToolBuilders/*
+*/reqLog/*
