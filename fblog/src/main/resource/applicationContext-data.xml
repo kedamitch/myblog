@@ -7,5 +7,33 @@
 	                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	                    http://www.springframework.org/schema/context
 	                    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-
+	
+	<bean id="placeholder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:datasource.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- <context:property-placeholder location="classpath:datasource.properties" /> -->
+	
+	<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${db.url}"/>
+		<property name="username" value="${db.userName}"/>
+		<property name="password" value="${db.password}"/>
+		<property name="initialSize" value="${db.initsize}"/>
+		<property name="maxActive" value="${db.maxActive}"/>
+		<property name="maxWait" value="${db.maxWait}"/>
+		<property name="maxIdle" value="${db.maxIdle}"/>
+		<property name="minIdle" value="${db.minIdle}"/>
+		<property name="testWhileIdle" value="true" /> <!-- 打开检查,用异步线程evict进行检查 -->  
+		<property name="testOnBorrow" value="false"/>
+		<property name="testOnReturn" value="false"/>
+		<property name="validationQuery" value="select 1 from dual"/>
+		<property name="validationQueryTimeout" value="3"/>  
+		<property name="timeBetweenEvictionRunsMillis" value="${db.testInterval}"/>  
+		<property name="numTestsPerEvictionRun" value="${db.testNum}"/>  	
+	</bean>
 </beans>
