@@ -33,12 +33,31 @@ create table blog_article (
 	userId Integer NOT NULL,
 	title VarChar(255) NOT NULL,
 	content LongText,
+	briefcontent LongText,
 	cateId Integer NOT NULL,
+	tags VarChar(255) NOT NULL default '',
 	createTime DateTime NOT NULL default '1970-01-01 00:00:00',
 	modifiedTime DateTime NOT NULL default '1970-01-01 00:00:00',
 	deleted Tinyint NOT NULL default 0,
 	primary key(articleId)
 ) ENGINE=INNODB default charset=utf8;
+
+#create article tag table
+create table blog_tags_artc (
+	Id VarChar(255) NOT NULL,
+	articleId Integer NOT NULL,
+	tagId Integer NOT NULL,
+	primary key(Id)
+) ENGINE=INNODB default charset=utf8;
+
+create table blog_tags (
+	tagId Integer auto_increment,
+	tagName VarChar(255) NOT NULL,
+	articleNum Integer NOT NULL default 0,
+	deleted Tinyint NOT NULL default 0,
+	primary key(tagId)
+) ENGINE=INNODB default charset=utf8;
+
 
 #create index on article table
 create index articleIndex on blog_article (userId, cateId);
@@ -59,19 +78,11 @@ create table blog_comment (
 	userName VarChar(50) NOT NULL,
 	articleId Integer NOT NULL,
 	content Text NOT NULL,
+	createTime DateTime NOT NULL default '1970-01-01 00:00:00',
 	deleted Tinyint default 0,
 	primary key(commentId)
 )ENGINE=INNODB default charset=utf8;
 
 create index commentIndex on blog_comment (userID,articleId);
-#create trigger to update article number
-delimiter //
-create trigger cateCounter after insert on blog_article	
-for each row begin 
-	update blog_article_cate set articleNum=articleNum+1 where cateId=New.cateId; 
-	insert into blog_hits (articleId) values (NEW.articleId);
-end//
 
-#create trigger to update comment count
-delimiter //
-create trigger commentCounter after insert on blog_comment for each row begin update blog_hits set commentCount=commentCount+1 where articleId=NEW.articleId; end//
+

@@ -41,4 +41,8 @@
 		<servlet-name>dispatch</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dispatch</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -11,10 +11,6 @@
 	$('.div_left').css('height',maxh + 'px');
 	$('.div_right').css('height',maxh + 'px');
 
-
-
-
-
 	$('.div_menue ul li').hover(
 		function(){//mouse enter
 			if($(this).attr('class') != 'currentpage') {
@@ -48,6 +44,21 @@
 		function() {
 			var fsize = parseInt($(this).css('font-size'));
 			$(this).css('font-size',(fsize-2) + 'px');
+		}
+	);
+
+	$('.pagebar a').hover(
+		function() {
+			$(this).css('background-color','#FF7744');
+			$(this).css('color','white');
+			$(this).css('font-size','18px');
+			$(this).css('margin-right','8px');
+		},
+		function() {
+			$(this).css('background-color','white');
+			$(this).css('color','#555');
+			$(this).css('font-size','14px');
+			$(this).css('margin-right','10px');
 		}
 	);
 	
