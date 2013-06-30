@@ -24,8 +24,7 @@ create table blog_article_cate (
 ) ENGINE=INNODB default charset=utf8;
 
 #insert root item into category table
-insert into blog_article_cate (parentId, categoryName) values(1,'root');
-insert into blog_article_cate (parentId, categoryName) values(1,'未分类');
+insert into blog_article_cate (parentId, categoryName) values(0,'root');
 #article 1:n article_cate
 #create article table
 create table blog_article (
@@ -52,7 +51,7 @@ create table blog_tags_artc (
 
 create table blog_tags (
 	tagId Integer auto_increment,
-	tagName VarChar(255) NOT NULL,
+	tagName VarChar(255) NOT NULL unique,
 	articleNum Integer NOT NULL default 0,
 	deleted Tinyint NOT NULL default 0,
 	primary key(tagId)
