@@ -1,0 +1,93 @@
+.header			{width:960px;height:120px;background-image:url("/static/image/head_bg.jpg");margin:auto;padding:40px;position:relative;}
+h1 a			{color:white;}
+.div_title			{color:white;margin-top:15px}
+.div_register		{color:white;position:absolute;top:2px;right:2px;cursor:pointer;}
+.div_register ul li {font-size:16px;float:right;line-height:40px;list-style-type:none;margin-right:5px;width:40px;}
+
+.div_menue			{width:1040px;margin:auto;padding-bottom:38px;background-image:url("/static/image/menue_bg.png");background-repeat:repeat-x;-webkit-border-radius: 2px 2px 3px 3px;}
+.div_menue ul li	{height:38px;line-height:38px;float:left;padding:0px 15px;cursor:pointer;list-style-type:none;}
+.div_menue ul li a	{color:white;text-decoration:none;}
+.currentpage		{background-image:url("/static/image/menue_hover_bg.png");}
+
+
+.main				{width:1040px;margin:auto;}
+
+.div_left			{width:760px;float:left;position:relative;min-height: 900px;}
+.div_atc_bref		{background-color:white;margin-top:1px;-webkit-border-radius: 2px 2px 3px 3px;padding:20px;}
+.div_atc_split		{height:15px;}
+
+.div_atc_name		{padding-bottom:10px;}
+.div_atc_name h2 a	{text-decoration:none;color:#555}
+.div_atc_content	{margin-bottom:15px;font-size:14px;}
+
+.div_atc_foot		{margin-bottom:-12px;}
+.div_atc_foot span	{font-size:13px;background-image:url("/static/image/icons.gif");background-repeat:no-repeat;padding:0px 20px;}
+.span_atc_author	{float:left;}
+.span_atc_author a	{text-decoration:none;color:#2970A6;}
+.span_atc_date		{background-position:0px -48px;float:left;}
+.span_atc_tags		{background-position:0px -400px;float:left;color:#999;}
+.span_view_num		{background-position:0px -96px;float:right;}
+.span_comments_num	{background-position:0px -96px;float:right;}
+.span_comments_num a{text-decoration:none;color:#1d53bf;}
+.div_atc_foot .clearboth {background-image:none;}
+
+.pagebar			{padding:30px 0px 15px 70px;bottom:0px;}
+.pagebar a			{font-size:14px;text-decoration:none;margin-right:10px;background-color:white;padding:5px 10px;vertical-align:bottom;cursor:pointer;}
+.pagebar .current	{background-image:url("/static/image/menue_hover_bg.png");color:white;}
+
+.div_right			{width:280px;background-color:#E0E1E2;float:left;}
+.div_right > div	{margin:auto;border-bottom:2px dotted #C5C6C7;padding:0px 30px 0px 20px;margin-top:5px;padding-bottom:5px;}
+.blogger img		{height:100px;width:100px;display:block;cursor:pointer;}
+.blogger .name		{padding:10px 10px 10px 20px;color:gray}
+.blogger .location	{padding:0px 10px 10px 20px;color:#555}
+.blogger .introduction	{margin:4px 0px 5px 0px;}
+.blogger .attr li	{background-color:#77DDFF;color:white;font-size:14px;padding:5px;margin:5px 5px 0px 0px;float:left;cursor:pointer;list-style-type:none;}
+
+.div_tag_title		{padding:5px;margin:3px 0px;color:#555;}
+.taglist a			{text-decoration:none;background-color:#77DDFF;color:white;margin:1px 1px;padding:1px;display:inline-block;}
+
+.package .div_package_name	{padding:5px;margin:3px 0px;color:#555}
+.package .list	li	{padding:6px;cursor:pointer;margin-left:30px;list-style:circle;list-style-type:none;}
+.package .list a	{text-decoration:none;font-size:14px;color:#555;}
+
+.lastest_art .div_tag_name	{padding:5px;margin:3px 0px;color:#555}
+.lastest_art .list	li	{padding:6px;cursor:pointer;margin-left:30px;list-style:circle;list-style-type:none;}
+.lastest_art .list a	{text-decoration:none;font-size:14px;color:#555;}
+
+.foot				{width:1020px;-webkit-border-radius: 2px 2px 3px 3px;background-image:url("/static/image/body_bg.png");margin:auto;padding:10px 0px 10px 20px;color:gray;font-size:14px;}
+.hehe				{display:block;margin-top:5px;}
+
+#login_layer_default {display:none; width:550px; height: 300px;}
+#login_layer         {background-image: url("/static/image/fatfei_login_bg.png") ;background-color: #fff; display: inline;position:fixed; top:50%; left:50%; margin-left:-275px; margin-top: -150px;width:550px; height: 300px;z-index:1000;border-radius:4px;padding: 10px 0px;}
+
+.login_input         {width:350px; height:40px; line-height: 40px; margin:5px;}
+#login_mask          {background-color: black;position:fixed;width:100%;height:100%;top:0px;left:0px;z-index:500;display:none;opacity:0.7}
+
+.login_header li     {cursor:pointer; height:40px;width:auto;line-height:40px;padding:0px 33px;float:left}
+.login_header .li-selected {border-bottom:2px #77DDFF solid}
+.login-content       {padding: 25px 0 15px 40px}
+.login_left input    {width:257px;height:35px; line-height: 35px; margin-bottom:15px;text-indent: 10px;border-radius: 4px;color:#979696;border:1px solid #d5d5d5;}
+.login_btn, .register_btn          {background-color: #77DDFF;color:white;font-size:20px;text-align: center;line-height: 35px;height:35px;width:130px;float:left;}
+.login_left          {float:left;border-right: 1px solid #dae2e5; width:300px;}
+.login_right         {float:left;padding-left:40px;}
+.qqbtn               {font-weight:bold; cursor:pointer; font-size:12px; width:128px; height: 32px; line-height: 32px;margin-bottom:5px; color:white; text-align: center; background-color: #3eb0d8; overflow: hidden;}
+.weibobtn            {font-weight:bold; cursor:pointer; font-size:12px; width:128px; height: 32px; line-height: 32px;margin-bottom:5px; color:white; text-align: center; background-color: #d63b22; overflow: hidden;}
+.bilibtn             {font-weight:bold; cursor:pointer; font-size:12px; width:128px; height: 32px; line-height: 32px;margin-bottom:5px; color:white; text-align: center; background-color: #ffac0b; overflow: hidden;}
+.qqbtn:hover         {background-color: #5bbcde;}
+.weibobtn:hover      {background-color: #dc5843;}
+.bilibtn:hover       {background-color: #ffc148;}
+.qq_logo             {float:left; width:32px; height:30px;position:relative; top:2px; left: 3px; background-image: url("/static/image/thirdLogin.png");background-position: -42px 0px;background-repeat: no-repeat; overflow: hidden;}
+.weibo_logo          {float:left; width:32px; height:30px;position:relative; top:2px; left: 3px; background-image: url("/static/image/thirdLogin.png");background-position: -88px 0px;background-repeat: no-repeat; overflow: hidden;}
+.bili_logo           {float:left; width:32px; height:30px;position:relative; top:2px; left: 3px; background-image: url("/static/image/thirdLogin.png");background-position: 0px 0px;background-repeat: no-repeat; overflow: hidden;}
+.login_close         {cursor:pointer; position:absolute; top:20px; right: 20px; width: 16px; height: 16px; background-image: url("/static/image/loginClose.gif"); background-repeat: no-repeat;}
+.register_btn, .login_btn {cursor: pointer;}
+#login_tip           {height:30px;line-height:30px;color:red;font-size:12px;}
+#post_info           {font-size: 16px;}
+#post_info input     {width:250px; height:30px; line-height: 30px; margin:5px;}
+#post_info span      {line-height: 34px; height: 34px; background-color: #77DDFF; margin: 5px 5px 5px 0px;display:inline-block; color: white; padding: 0px 8px;}
+#post_info #submitPost          {cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;float:left;}
+#cate_selector       {height:30px;line-height: 30px; color: white; font-size: 16px;}
+
+#gotoTop             {cursor: pointer; position: fixed; bottom: 32px; right: 20px; width: 58px; height: 58px; background: url(http://img.lanrentuku.com/img/images/a.png) no-repeat;background-position:0 -40px;}
+#addpost_btn         {display:none; cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;margin:5px 10px 10px 20px;}
+
