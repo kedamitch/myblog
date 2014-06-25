@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+	<link href="/static/css/head.css" rel="stylesheet" type="text/css" />
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.tmpl.min.js"></script>
+</head>
+<body>
+<div class="header shaddow">
+	<div class="div_title">
+		<h1>
+			<a href="http://www.fatfei.com:8080/blog/index.html">中二病のworld</a>
+		</h1>	
+		<div>热爱生活，热爱编程</div>
+	</div>
+	<div class="div_register">
+		<ul>
+			<!-- <li id="qq_login">登录</li> -->
+			<li id="blog_login">登录</li>
+			<!-- <li id="blog_register">注册</li> -->
+		</ul>
+	</div>
+</div>
+<div class="div_menue shaddow">
+	<ul class="ul_items">
+		<li class="currentpage">
+			<h3>
+				<a href="">主页</a>
+			</h3>
+		</li>
+		<li>
+			<h3>
+				<a href="">算法</a>
+			</h3>
+		</li>
+		<li>
+			<h3>
+				<a href="">计算机网络</a>
+			</h3>
+		</li>		
+		<li>
+			<h3>
+				<a href="">nodejs</a>
+			</h3>
+		</li>		
+		<li>
+			<h3>
+				<a href="">java</a>
+			</h3>
+		</li>
+		<li>
+			<h3>
+				<a href="">设计模式</a>
+			</h3>
+		</li>	
+		<li>
+			<h3>
+				<a href="">数据库</a>
+			</h3>
+		</li>
+		<li>
+			<h3>
+				<a href="">随笔</a>
+			</h3>
+		</li>
+	</ul>
+</div>
+<div class="main">
+	<div class="div_left">
+		<div id="postlist"></div>
+		<!--<div class="pagebar">
+			<a class="pagenum">首页</a>
+			<a class="pagenum">前一页</a>
+			<a class="pagenum current">1</a>
+			<a class="pagenum">2</a>
+			<a class="pagenum">3</a>
+			<a class="pagenum">4</a>
+			<a class="pagenum">5</a>
+			<a class="pagenum">6</a>
+			<a class="pagenum">7</a>
+			<a class="pagenum">8</a>
+			<a class="pagenum">后一页</a>
+			<a class="pagenum">尾页</a>
+		</div>-->
+	</div>
+	<div class="div_right">
+		<div class="blogger">
+			<div>
+				<div style="float:left">
+					<img src="/static/image/yasina.jpg" title="kedamitch">
+				</div>
+				<div style="float:left">
+					<div class="name"><h3>kedamitch</h3></div>
+					<div class="location">上海 浦东</div>
+					<div id="addpost_btn">
+						发文章
+					</div>					
+					<div class="clearboth"></div>
+				</div>
+				<div class="clearboth"></div>
+			</div>
+			<div class="introduction">
+				<ul class="attr">
+					<li>程序猿</li>
+					<li>宅男</li>
+					<li>动漫</li>
+					<li>loli控</li>
+					<li>汪星人控</li>
+					<li>互联网</li>
+				</ul>
+				<div class="clearboth"></div>
+			</div>
+		</div>
+		<div class="div_tags">
+			<div class="div_tag_title"><h2>热门标签</h2></div>
+			<div>
+				<div class="taglist">
+					<a href="" style="font-size:22pt">java</a>
+					<a href="" style="font-size:10pt">c++</a>
+					<a href="" style="font-size:11.4pt">算法</a>
+					<a href="" style="font-size:15.3pt">pptv</a>
+					<a href="" style="font-size:13.6pt">ads</a>
+					<a href="" style="font-size:19pt">数据挖掘</a>
+					<a href="" style="font-size:20pt">mysql</a>
+					<a href="" style="font-size:18pt">互联网</a>
+					<a href="" style="font-size:17.5pt">javascript</a>
+					<a href="" style="font-size:14.3pt">动漫</a>
+				</div>
+			</div>
+		</div>
+		<div class="package" style="border:none">
+			<div class="div_package_name"><h2>归档</h2></div>
+			<div class="list">
+				<ul>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+					<li>
+						<a href="">2013年06月（2）</a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+	<div class="clearboth"></div>
+</div>
+<div class="foot">
+	<span>版权所有2013-2013 kedamitch</span>
+	<span class="hehe">本站无任何许可证</span>
+</div>
+
+<div id="login_layer_default">
+	<div class="login_header" style="border-bottom:2px #e9e9e9 solid">
+		<ul style="height:40px;color:#77DDFF;font-size:20px;letter-spacing:2px;">
+			<li class="login_tab li-selected">登录</li>
+			<li class="register_tab">注册</li>
+		</ul>
+		<div class="login_close"></div>
+	</div>
+	<div class="login-content">
+		<div id="login_tip">
+			
+		</div>		
+		<div class="login_left">
+			<div><input type="text" placeholder="请输入用户名" class="input_username"></div>
+			<div><input type="password" placeholder="请输入密码" class="input_password"></div>
+			<div style="margin-top:5px;">
+				<div class="login_btn">登录</div>
+				<p style="float:left;color:#858585;font-size:12px;margin:10px 0px 0px 10px;">没有账号？<span style="color:#3EB0D8;cursor:pointer;text-decoration:underline;">马上注册</span></p>
+				<div class="clearboth"></div>
+			</div>
+		</div>
+		<div class="login_right">
+			<div style="font-size:12px;margin:15px 0px;color:#858585">第三方账号直接登录</div>
+			<div class="qqbtn">
+				<span class="qq_logo"></span>
+				QQ账号登录
+			</div>
+			<div class="weibobtn">
+				<span class="weibo_logo"></span>
+				微博账号登录
+			</div>
+			<div class="bilibtn">
+				<span class="bili_logo"></span>
+				bilibili登录
+			</div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+<div id="login_mask">
+</div>
+
+<div id="gotoTop">
+	
+</div>
+
+<script id="article-tmpl" type="text/x-jquery-tmpl">
+	{{each(i, article) posts}}
+		<div class="div_atc_bref">
+			<div class="div_atc_name">
+			 	<input type="hidden" class="input_atc_id" value="${article.id}">
+				<h2>
+					<a href="/blog/detail.html?postId=${article.id}">${article.title}</a>
+				</h2>
+			</div>	
+			<div class="div_atc_content">
+				{{html article.content}}
+			</div>
+			<div class="div_atc_foot">
+			    <span class="span_atc_tags">${article.tags}</span>
+				<span class="span_atc_author">
+					<a href="">${article.author}</a>
+				</span>	
+				<span class="span_atc_date">${article.date}</span>
+				<span class="span_view_num">${article.viewCount}</span>
+				<span class="span_comments_num">
+					<a href="">${article.commentCount}</a>
+				</span>
+				<span class="clearboth"></span>
+			</div>
+		</div>
+		<div class="div_atc_split"></div>
+	{{/each}}
+</script>
+
+<script type="text/javascript">
+	// QC.Login({
+ //       btnId:"qq_login"    //插入按钮的节点id
+	// });
+</script>
+<!-- bind event  -->
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/user.js"></script>
+<script type="text/javascript" src="/static/js/detail.js"></script>
+
+</body>
+</html>

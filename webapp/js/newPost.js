@@ -24,29 +24,6 @@
         });
     }
 
-    var fixedRight = function(e) {
-        var marginBot = 0,
-            scrollTop = 0;
-        if (document.compatMode === "CSS1Compat") {
-            marginBot = document.documentElement.scrollHeight - (document.documentElement.scrollTop + document.body.scrollTop) - document.documentElement.clientHeight;
-            scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
-        } else {
-            marginBot = document.body.scrollHeight - document.body.scrollTop - document.body.clientHeight;
-            scrollTop = document.body.scrollTop;
-        }
-        if (scrollTop >= 240) {
-            $('.div_right').css('position', 'fixed');
-            $('.div_right').css('top', '0px');
-            $('.div_right').css('right', (document.body.clientWidth - 1040) / 2 + 'px');
-        } else {
-            $('.div_right').css('position', 'static');
-        }
-    };
-
-    $(window).scroll(fixedRight);
-
-    $(window).resize(fixedRight);
-
     $('#submitPost').on('click', function() {
         var title = $('#post_title').val(),
             tags = $('#post_tags').val(),
@@ -81,10 +58,6 @@
 
     });
 
-    $('#gotoTop').on('click', function() {
-        scroll(0, 0);
-    });
-
     //初始化页面，获取用户权限信息
     (function init() {
         validate(function(isValid, userInfo) {
@@ -92,11 +65,11 @@
             console.info(userInfo);
             if (!isValid) {
                 alert('你没有权限发帖');
-                window.location.href = '/index.html';
+                window.location.href = '/blog/index.html';
                 return;
             } else if (userInfo && userInfo.role !== 'admin') {
                 alert('你没有权限发帖');
-                window.location.href = '/index.html';
+                window.location.href = '/blog/index.html';
                 return;
             }
 

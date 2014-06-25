@@ -71,7 +71,11 @@ require('fatfei.provider.loader').initialize({
             }
         }, {
             "name": "ueditor",
-            "implementation": "fatfei.api.ueditor"
+            "implementation": "fatfei.api.ueditor",
+            "settings": {
+                "ueditorRoot": require('path').dirname(module.filename) + '/webapp/ueditor/',
+                "staticPrefix": "/static/ueditor/"
+            }
         }]
     },
     function() {
