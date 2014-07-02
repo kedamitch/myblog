@@ -33,7 +33,11 @@
         console.info(cate);
         var content = ueditor.getContent();
         var abstract = ueditor.getContentTxt();
-        alert(abstract);
+
+        if (!title || !cate || !content) {
+            alert('请输入完整文章信息');
+            return;
+        }
         $.ajax({
             url: '/blog/pubPost',
             type: 'post',

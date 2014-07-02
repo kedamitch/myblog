@@ -13,7 +13,7 @@ h1 a			{color:white;}
 .main				{width:1040px;margin:auto;}
 
 .div_left			{width:760px;float:left;position:relative;min-height: 900px;}
-.div_atc_bref		{background-color:white;margin-top:1px;-webkit-border-radius: 2px 2px 3px 3px;padding:20px;}
+.div_atc_bref		{background-color:white;margin-top:1px;-webkit-border-radius: 2px 2px 3px 3px;padding:20px;max-width: 720px; overflow: hidden;}
 .div_atc_split		{height:15px;}
 
 .div_atc_name		{padding-bottom:10px;}
