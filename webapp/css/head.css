@@ -18,7 +18,7 @@ h1 a			{color:white;}
 
 .div_atc_name		{padding-bottom:10px;}
 .div_atc_name h2 a	{text-decoration:none;color:#555}
-.div_atc_content	{margin-bottom:15px;font-size:14px;}
+.div_atc_content	{margin-bottom:15px;font-size:14px;overflow: hidden;}
 
 .div_atc_foot		{margin-bottom:-12px;}
 .div_atc_foot span	{font-size:13px;background-image:url("/static/image/icons.gif");background-repeat:no-repeat;padding:0px 20px;}
