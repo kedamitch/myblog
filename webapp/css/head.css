@@ -35,20 +35,21 @@ h1 a			{color:white;}
 .pagebar a			{font-size:14px;text-decoration:none;margin-right:10px;background-color:white;padding:5px 10px;vertical-align:bottom;cursor:pointer;}
 .pagebar .current	{background-image:url("/static/image/menue_hover_bg.png");color:white;}
 
-.div_right			{width:280px;/*background-color:#E0E1E2;*/float:left;}
-.div_right > div	{margin:auto;/*border-bottom:2px dotted #C5C6C7;*/padding:0px 0px 20px 0px;/*margin-top:5px;padding-bottom:5px;*/background-color: #97644b}
+.div_right			{width:280px;/*background-color:#E0E1E2;*/float:left;margin-right: 125px;}
+.div_right > div	{margin:auto;/*border-bottom:2px dotted #C5C6C7;*/margin-bottom:20px; background-color: #97644b; padding:20px 0px 20px 20px;}
 .blogger img		{height:100px;width:100px;display:block;cursor:pointer;}
-.blogger .name		{padding:10px 10px 10px 20px;color:gray}
-.blogger .location	{padding:0px 10px 10px 20px;color:#555}
+.blogger			{padding:20px 0px 20px 20px;}
+.blogger .name		{padding:10px 0px 0px 20px;color:white}
+.blogger .location	{padding:10px 0px 0px 20px;color:white; font-size: 20px;}
 .blogger .introduction	{margin:4px 0px 5px 0px;}
-.blogger .attr li	{background-color:#e4c282;color:white;font-size:14px;padding:5px;margin:5px 5px 0px 0px;float:left;cursor:pointer;list-style-type:none;}
+.blogger .attr li	{font-weight: bold;background-color:#e4c282;color:#7d4a2b;font-size:18px;padding:10px;margin:20px 20px 0px 0px;float:left;cursor:pointer;list-style-type:none;}
 
-.div_tag_title		{padding:5px;margin:3px 0px;color:#555;}
-.taglist a			{text-decoration:none;background-color:#77DDFF;color:white;margin:1px 1px;padding:1px;display:inline-block;}
+.div_tag_title		{/*padding:5px;*/color:white;}
+.taglist a			{font-weight: bold;text-decoration:none;background-color:#e4c282;color:#7d4a2b;margin:20px 20px 0px 0px;padding:10px;display:inline-block;font-size:18px;}
 
-.package .div_package_name	{padding:5px;margin:3px 0px;color:#555}
-.package .list	li	{padding:6px;cursor:pointer;margin-left:30px;list-style:circle;list-style-type:none;}
-.package .list a	{text-decoration:none;font-size:14px;color:#555;}
+.package .div_package_name	{color:white}
+.package .list	li	{padding-top:20px;cursor:pointer;/*margin-left:30px;*/list-style:circle;list-style-type:none;}
+.package .list a	{text-decoration:none;font-size:20px;color:#e4c282;}
 
 .lastest_art .div_tag_name	{padding:5px;margin:3px 0px;color:#555}
 .lastest_art .list	li	{padding:6px;cursor:pointer;margin-left:30px;list-style:circle;list-style-type:none;}
@@ -88,6 +89,6 @@ h1 a			{color:white;}
 #post_info #submitPost          {cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;float:left;}
 #cate_selector       {height:30px;line-height: 30px; color: white; font-size: 16px;}
 
-#gotoTop             {cursor: pointer; position: fixed; bottom: 32px; right: 20px; width: 58px; height: 58px; background: url(http://img.lanrentuku.com/img/images/a.png) no-repeat;background-position:0 -40px;}
-#addpost_btn         {display:none; cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;margin:5px 10px 10px 20px;}
-
+#gotoTop             {cursor: pointer; position: fixed; bottom: 32px; right: 40px; width: 58px; height: 58px; background: url(http://img.lanrentuku.com/img/images/a.png) no-repeat;background-position:0 -40px;}
+#addpost_btn         {display:none; cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;margin:5px 10px 0px 20px;}
+.foot				 {background-color: #ffcccc;}

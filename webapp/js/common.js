@@ -88,7 +88,7 @@
         if (scrollTop >= 400) {
             $('.div_right').css('position', 'fixed');
             $('.div_right').css('top', '0px');
-            $('.div_right').css('right', (document.body.clientWidth - 1040) / 2 + 'px');
+            $('.div_right').css('right', (document.body.clientWidth - 1366) / 2 + 'px');
         } else {
             $('.div_right').css('position', 'static');
         }
