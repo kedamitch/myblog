@@ -44,7 +44,7 @@
         },
         function() { //mouse leave
             // $(this).css('background-color', 'transparent');
-            $(this).children('a').css('color', '#e4c282;');
+            $(this).children('a').css('color', '#e4c282');
         }
     );
 
@@ -75,27 +75,27 @@
         }
     );
 
-    var fixedRight = function(e) {
-        var marginBot = 0,
-            scrollTop = 0;
-        if (document.compatMode === "CSS1Compat") {
-            marginBot = document.documentElement.scrollHeight - (document.documentElement.scrollTop + document.body.scrollTop) - document.documentElement.clientHeight;
-            scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
-        } else {
-            marginBot = document.body.scrollHeight - document.body.scrollTop - document.body.clientHeight;
-            scrollTop = document.body.scrollTop;
-        }
-        if (scrollTop >= 400) {
-            $('.div_right').css('position', 'fixed');
-            $('.div_right').css('top', '0px');
-            $('.div_right').css('right', (document.body.clientWidth - 1366) / 2 + 'px');
-        } else {
-            $('.div_right').css('position', 'static');
-        }
-    };
+    // var fixedRight = function(e) {
+    //     var marginBot = 0,
+    //         scrollTop = 0;
+    //     if (document.compatMode === "CSS1Compat") {
+    //         marginBot = document.documentElement.scrollHeight - (document.documentElement.scrollTop + document.body.scrollTop) - document.documentElement.clientHeight;
+    //         scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
+    //     } else {
+    //         marginBot = document.body.scrollHeight - document.body.scrollTop - document.body.clientHeight;
+    //         scrollTop = document.body.scrollTop;
+    //     }
+    //     if (scrollTop >= 400) {
+    //         $('.div_right').css('position', 'fixed');
+    //         $('.div_right').css('top', '0px');
+    //         $('.div_right').css('right', (document.body.clientWidth - 1366) / 2 + 'px');
+    //     } else {
+    //         $('.div_right').css('position', 'static');
+    //     }
+    // };
 
-    $(window).scroll(fixedRight);
+    // $(window).scroll(fixedRight);
 
-    $(window).resize(fixedRight);
+    // $(window).resize(fixedRight);
 
 })(jQuery);
