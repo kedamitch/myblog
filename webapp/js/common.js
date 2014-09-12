@@ -39,12 +39,12 @@
 
     $('.package li , .lastest_art li').hover(
         function() { //mouse enter
-            $(this).css('background-color', '#AAAAAA');
+            // $(this).css('background-color', '#AAAAAA');
             $(this).children('a').css('color', 'white');
         },
         function() { //mouse leave
-            $(this).css('background-color', 'transparent');
-            $(this).children('a').css('color', '#555');
+            // $(this).css('background-color', 'transparent');
+            $(this).children('a').css('color', '#e4c282;');
         }
     );
 
