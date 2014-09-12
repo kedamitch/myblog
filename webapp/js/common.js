@@ -27,12 +27,12 @@
     $('.div_menue ul li').hover(
         function() { //mouse enter
             if ($(this).attr('class') != 'currentpage') {
-                $(this).css('background-image', 'url("/static/image/menue_bg.png")');
+                $(this).css('background-color', '#7d4a2b');
             }
         },
         function() { //mouse leave
             if ($(this).attr('class') != 'currentpage') {
-                $(this).css('background-image', 'none');
+                $(this).css('background-color', '#999966');
             }
         }
     );
@@ -85,7 +85,7 @@
             marginBot = document.body.scrollHeight - document.body.scrollTop - document.body.clientHeight;
             scrollTop = document.body.scrollTop;
         }
-        if (scrollTop >= 240) {
+        if (scrollTop >= 400) {
             $('.div_right').css('position', 'fixed');
             $('.div_right').css('top', '0px');
             $('.div_right').css('right', (document.body.clientWidth - 1040) / 2 + 'px');
