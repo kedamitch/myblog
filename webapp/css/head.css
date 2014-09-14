@@ -87,7 +87,7 @@ h1 a			{color:white;}
 #post_info input     {width:250px; height:30px; line-height: 30px; margin:5px;}
 #post_info span      {line-height: 34px; height: 34px; background-color: #77DDFF; margin: 5px 5px 5px 0px;display:inline-block; color: white; padding: 0px 8px;}
 #post_info #submitPost          {cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;float:left;}
-#cate_selector       {height:30px;line-height: 30px; color: white; font-size: 16px;}
+#cate_selector       {height:30px;line-height: 30px; color: #555; font-size: 16px;}
 
 #gotoTop             {cursor: pointer; position: fixed; bottom: 32px; right: 40px; width: 58px; height: 58px; background: url(http://img.lanrentuku.com/img/images/a.png) no-repeat;background-position:0 -40px;}
 #addpost_btn         {display:none; cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;margin:5px 10px 0px 20px;}
