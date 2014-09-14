@@ -24,7 +24,7 @@
     });
     // 
 
-    $('.div_menue ul li').hover(
+    $('.div_menue').on('hover', 'ul li', 
         function() { //mouse enter
             if ($(this).attr('class') != 'currentpage') {
                 $(this).css('background-color', '#7d4a2b');
@@ -36,6 +36,19 @@
             }
         }
     );
+
+    // $('.div_menue ul li').hover(
+    //     function() { //mouse enter
+    //         if ($(this).attr('class') != 'currentpage') {
+    //             $(this).css('background-color', '#7d4a2b');
+    //         }
+    //     },
+    //     function() { //mouse leave
+    //         if ($(this).attr('class') != 'currentpage') {
+    //             $(this).css('background-color', '#999966');
+    //         }
+    //     }
+    // );
 
     $('.package li , .lastest_art li').hover(
         function() { //mouse enter
