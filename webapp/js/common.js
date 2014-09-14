@@ -24,19 +24,21 @@
     });
     // 
 
-    $('.div_menue').on('hover', 'ul li', 
+    $('.div_menue').on('mouseenter', 'li', 
         function() { //mouse enter
             if ($(this).attr('class') != 'currentpage') {
                 $(this).css('background-color', '#7d4a2b');
             }
-        },
+        }
+    );
+
+    $('.div_menue').on('mouseleave', 'li', 
         function() { //mouse leave
             if ($(this).attr('class') != 'currentpage') {
                 $(this).css('background-color', '#999966');
             }
         }
-    );
-
+    );    
     // $('.div_menue ul li').hover(
     //     function() { //mouse enter
     //         if ($(this).attr('class') != 'currentpage') {
