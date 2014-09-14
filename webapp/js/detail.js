@@ -71,6 +71,9 @@
             if (userInfo && userInfo.role == 'admin') {
                 $('#addpost_btn').css('display', 'block');
             }
+            //加载分类信息
+            loadCates(null);            
+
             //加载文章列表
             var url = window.location.href;
             var postId = url.replace(/.*postId=(\d+)$/, "$1");

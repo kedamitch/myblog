@@ -83,7 +83,7 @@ h1 a			{color:white;}
 .login_close         {cursor:pointer; position:absolute; top:20px; right: 20px; width: 16px; height: 16px; background-image: url("/static/image/loginClose.gif"); background-repeat: no-repeat;}
 .register_btn, .login_btn {cursor: pointer;}
 #login_tip           {height:30px;line-height:30px;color:red;font-size:12px;}
-#post_info           {font-size: 16px;}
+#post_info           {font-size: 16px; margin-top: 20px; margin-left: 130px;}
 #post_info input     {width:250px; height:30px; line-height: 30px; margin:5px;}
 #post_info span      {line-height: 34px; height: 34px; background-color: #77DDFF; margin: 5px 5px 5px 0px;display:inline-block; color: white; padding: 0px 8px;}
 #post_info #submitPost          {cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;float:left;}

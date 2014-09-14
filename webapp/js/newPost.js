@@ -82,6 +82,13 @@
                 $('#blog_login').html(userInfo.username);
                 $('#blog_login').unbind('click');
             }
+
+            //加载分类信息
+            loadCates(null, function(cateList) {
+                for(var i = 0; i < cateList.length; i++) {
+                    $("#cate_selector").append($('<option value="' + cateList[i].key + '">' + cateList[i].name + '</option>'))
+                }
+            });            
         });
     })();
 

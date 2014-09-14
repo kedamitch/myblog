@@ -15,44 +15,9 @@
 	<ul class="ul_items">
 		<li class="currentpage">
 			<h2>
-				<a href="">主页</a>
-			</h2>
-		</li>
-		<li>
-			<h2>
-				<a href="">算法</a>
-			</h2>
-		</li>
-		<li>
-			<h2>
-				<a href="">计算机网络</a>
+				<a cate="fontpage" href="/blog/index.html">主页</a>
 			</h2>
 		</li>		
-		<li>
-			<h2>
-				<a href="">nodejs</a>
-			</h2>
-		</li>		
-		<li>
-			<h2>
-				<a href="">java</a>
-			</h2>
-		</li>
-		<li>
-			<h2>
-				<a href="">设计模式</a>
-			</h2>
-		</li>	
-		<li>
-			<h2>
-				<a href="">数据库</a>
-			</h2>
-		</li>
-		<li>
-			<h2>
-				<a href="">随笔</a>
-			</h2>
-		</li>
 	</ul>
 	<span id="blog_login">登录</span>
 </div>
@@ -220,7 +185,15 @@
 <div id="login_mask">
 </div>
 
-
+<script id="cate-tmpl" type="text/x-jquery-tmpl">
+	{{each(i, cate) cateList}}
+		<li {{if cateList.iscur}}class="currentpage"{{/if}}>
+			<h2>
+				<a cate="${cate.key}" href="/blog/index.html?cate=${cate.key}">${cate.name}</a>
+			</h2>
+		</li>
+	{{/each}}
+</script>
 
 <script id="article-tmpl" type="text/x-jquery-tmpl">
 	{{each(i, article) posts}}

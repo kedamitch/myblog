@@ -37,7 +37,7 @@
         var isFinish = false, //文章是否被拉完
             newestId = ''; //下次拉取的起点
 
-        return function(count, cb) {
+        return function(count, cate, cb) {
             if (isFinish) {
                 return;
             }
@@ -48,7 +48,8 @@
                 dataType: 'json',
                 data: {
                     start: newestId,
-                    count: count
+                    count: count,
+                    cate: cate
                 },
                 async: true,
                 success: function(rsp) {
@@ -80,6 +81,7 @@
         };
     })();
 
+
     $('#addpost_btn').on('click', function() {
         window.location.href = '/blog/newPost.html';
     });
@@ -95,8 +97,16 @@
             if (userInfo && userInfo.role == 'admin') {
                 $('#addpost_btn').css('display', 'block');
             }
+
+            var matchs = window.location.href.match(/.*[?&]cate=([^&]+).*/);
+            if(matchs && matchs[1]) {
+                var cate = matchs[1];
+            }
+
+            //加载分类信息
+            loadCates(cate);
             //加载文章列表
-            loadPosts(10, function(err, total, posts) {});
+            loadPosts(10, cate, function(err, total, posts) {});
         });
     })();
 
