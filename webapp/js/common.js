@@ -75,7 +75,7 @@
         }
     );
 
-    function loadCates(cate, cb) {
+    window.loadCates = function (cate, cb) {
         $.ajax({
             url: "/blog/getCate",
             type: "get",
@@ -102,7 +102,7 @@
                 }
             }
         });
-    }    
+    };    
 
     // var fixedRight = function(e) {
     //     var marginBot = 0,
