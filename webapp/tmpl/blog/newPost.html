@@ -157,6 +157,16 @@
 <div id="login_mask">
 </div>
 
+<script id="cate-tmpl" type="text/x-jquery-tmpl">
+	{{each(i, cate) cateList}}
+		<li {{if cateList.iscur}}class="currentpage"{{/if}}>
+			<h2>
+				<a cate="${cate.key}" href="/blog/index.html?cate=${cate.key}">${cate.name}</a>
+			</h2>
+		</li>
+	{{/each}}
+</script>
+
 <!-- bind event  -->
 <script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/newPost.js"></script>

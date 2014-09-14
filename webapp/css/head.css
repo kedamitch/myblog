@@ -91,3 +91,4 @@ h1 a			{color:white;}
 
 #gotoTop             {cursor: pointer; position: fixed; bottom: 32px; right: 40px; width: 58px; height: 58px; background: url(http://img.lanrentuku.com/img/images/a.png) no-repeat;background-position:0 -40px;}
 #addpost_btn         {display:none; cursor:pointer;background-color: #f6a200;color:white;font-size:16px;text-align: center;line-height: 30px;height:30px;width:80px;margin:5px 10px 0px 20px;}
+#editor				 {margin-left: 130px; margin-right: 20px;}

@@ -168,6 +168,16 @@
 	
 </div>
 
+<script id="cate-tmpl" type="text/x-jquery-tmpl">
+	{{each(i, cate) cateList}}
+		<li {{if cateList.iscur}}class="currentpage"{{/if}}>
+			<h2>
+				<a cate="${cate.key}" href="/blog/index.html?cate=${cate.key}">${cate.name}</a>
+			</h2>
+		</li>
+	{{/each}}
+</script>
+
 <script id="article-tmpl" type="text/x-jquery-tmpl">
 	{{each(i, article) posts}}
 		<div class="div_atc_bref">
