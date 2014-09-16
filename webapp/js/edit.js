@@ -101,10 +101,10 @@
 							$('#post_title').val(articleObj.title);
             				$('#post_tags').val(articleObj.tags.join(","));
 							window.ueditor = UE.getEditor('container');
-						    ueditor.addListener( 'ready', function(editor) {
-						     	editor.setContent(articleObj.content);
+						    ueditor.ready(function() {
+						     	ueditor.setContent(articleObj.content);
 						 	});            				
-        					$('"#cate_selector option[value=' + articleObj.cate + ']"').attr('selected', 'true');
+        					$('"#cate_selector option[value="' + articleObj.cate + '"]"').attr('selected', 'true');
             			}
             		}
             	});
