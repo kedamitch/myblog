@@ -35,11 +35,13 @@
             alert('请输入完整文章信息');
             return;
         }
+        var postId = window.location.href.replace(/.*postId=(\d+)$/, "$1");
         $.ajax({
             url: '/blog/editPost',
             type: 'post',
-            dataTypeT: 'json',
+            dataType: 'json',
             data: {
+            	postId: postId,
                 title: title,
                 content: content,
                 abstract: abstract,
