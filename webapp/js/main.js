@@ -96,7 +96,6 @@
             }
             if (userInfo && userInfo.role == 'admin') {
                 $('#addpost_btn').css('display', 'block');
-                $('.span_atc_edit').css('display', 'block');
             }
 
             var matchs = window.location.href.match(/.*[?&]cate=([^&]+).*/);
@@ -107,7 +106,11 @@
             //加载分类信息
             loadCates(cate);
             //加载文章列表
-            loadPosts(10, cate, function(err, total, posts) {});
+            loadPosts(10, cate, function(err, total, posts) {
+                if (userInfo && userInfo.role == 'admin') {
+                    $('.span_atc_edit').css('display', 'block');
+                }
+            });
         });
     })();
 

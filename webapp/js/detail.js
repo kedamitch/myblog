@@ -34,7 +34,7 @@
     }
 
     //加载指定类型的文章
-    var getPostById = function(postId) {
+    var getPostById = function(postId, cb) {
         $.ajax({
             url: '/blog/getPostById',
             type: 'get',
@@ -51,6 +51,7 @@
                     $('#article-tmpl').tmpl({
                         posts: [postobj]
                     }).appendTo('#postlist');
+                    cb();
                 }
             }
         });
@@ -70,7 +71,6 @@
             }
             if (userInfo && userInfo.role == 'admin') {
                 $('#addpost_btn').css('display', 'block');
-                $('.span_atc_edit').css('display', 'block');
             }
             //加载分类信息
             loadCates(null);            
@@ -79,7 +79,11 @@
             var url = window.location.href;
             var postId = url.replace(/.*postId=(\d+)$/, "$1");
 
-            getPostById(postId);
+            getPostById(postId, function() {
+                if (userInfo && userInfo.role == 'admin') {
+                    $('.span_atc_edit').css('display', 'block');
+                }                
+            });
         });
     })();
 

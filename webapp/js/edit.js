@@ -83,7 +83,7 @@
                 }
             });            
             //加载指定文章信息
-            var postId = url.replace(/.*postId=(\d+)$/, "$1");
+            var postId = window.location.href.replace(/.*postId=(\d+)$/, "$1");
             if(postId) {
             	$.ajax({
             		url: "/blog/getPostById",
