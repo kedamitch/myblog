@@ -100,7 +100,10 @@
             				var articleObj = rsp.data;
 							$('#post_title').val(articleObj.title);
             				$('#post_tags').val(articleObj.tags.join(","));
-        					ueditor.setContent(articleObj.content);
+							window.ueditor = UE.getEditor('container');
+						    editor.addListener( 'ready', function( editor ) {
+						     	ueditor.setContent(articleObj.content);
+						 	});            				
         					$('"#cate_selector option[value=' + articleObj.cate + ']"').attr('selected', 'true');
             			}
             		}
