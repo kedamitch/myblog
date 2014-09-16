@@ -79,14 +79,19 @@
                 $('#blog_login').html(userInfo.username);
                 $('#blog_login').unbind('click');
             }
-			loadCates(null, function(cateList) {
-                for(var i = 0; i < cateList.length; i++) {
-                    $("#cate_selector").append($('<option value="' + cateList[i].key + '">' + cateList[i].name + '</option>'))
-                }
-            });            
+			           
             //加载指定文章信息
             var postId = window.location.href.replace(/.*postId=(\d+)$/, "$1");
             if(postId) {
+            	var articleObj;
+				loadCates(null, function(cateList) {
+	                for(var i = 0; i < cateList.length; i++) {
+	                    $("#cate_selector").append($('<option value="' + cateList[i].key + '">' + cateList[i].name + '</option>'))
+	                	if(articleObj) {
+							$('#cate_selector option[value="' + articleObj.cate + '"]').attr('selected', 'true');
+	                	}
+	                }
+	            });             	
             	$.ajax({
             		url: "/blog/getPostById",
             		type: "get",
@@ -99,7 +104,7 @@
             			if(rsp.err) {
             				alert("获取文章信息失败");
             			} else {
-            				var articleObj = rsp.data;
+            				articleObj = rsp.data;
 							$('#post_title').val(articleObj.title);
             				$('#post_tags').val(articleObj.tags.join(","));
 							window.ueditor = UE.getEditor('container');
