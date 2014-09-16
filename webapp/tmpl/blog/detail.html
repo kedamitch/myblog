@@ -2,6 +2,8 @@
 <html>
 <head>
 	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+	<title>肥飞のblog</title>
+	<meta name="keywords" content="技术博客,java,nodejs" />		
 	<link href="/static/css/head.css" rel="stylesheet" type="text/css" />
 	<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
@@ -23,20 +25,6 @@
 <div class="main">
 	<div class="div_left">
 		<div id="postlist"></div>
-		<!--<div class="pagebar">
-			<a class="pagenum">首页</a>
-			<a class="pagenum">前一页</a>
-			<a class="pagenum current">1</a>
-			<a class="pagenum">2</a>
-			<a class="pagenum">3</a>
-			<a class="pagenum">4</a>
-			<a class="pagenum">5</a>
-			<a class="pagenum">6</a>
-			<a class="pagenum">7</a>
-			<a class="pagenum">8</a>
-			<a class="pagenum">后一页</a>
-			<a class="pagenum">尾页</a>
-		</div>-->
 	</div>
 	<div class="div_right">
 		<div class="blogger">
@@ -196,6 +184,9 @@
 					<a href="">${article.author}</a>
 				</span>	
 				<span class="span_atc_date">${article.date}</span>
+				<span class="span_atc_edit">
+					<a href="/blog/edit.html?postId=${article.id}">编辑</a>
+				</span>				
 				<span class="span_view_num">${article.viewCount}</span>
 				<span class="span_comments_num">
 					<a href="">${article.commentCount}</a>

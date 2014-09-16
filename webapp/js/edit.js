@@ -36,7 +36,7 @@
             return;
         }
         $.ajax({
-            url: '/blog/pubPost',
+            url: '/blog/editPost',
             type: 'post',
             dataTypeT: 'json',
             data: {
@@ -48,10 +48,10 @@
             },
             success: function(rsp) {
                 if (rsp.err) {
-                    alert('发布文章失败');
+                    alert('修改文章失败');
                     console.error(rsp.data);
                 } else {
-                    alert('发布成功');
+                    alert('修改成功');
                     window.location.href = '/blog/index.html';
                 }
             }
@@ -77,13 +77,37 @@
                 $('#blog_login').html(userInfo.username);
                 $('#blog_login').unbind('click');
             }
-
-            //加载分类信息
-            loadCates(null, function(cateList) {
+			loadCates(null, function(cateList) {
                 for(var i = 0; i < cateList.length; i++) {
                     $("#cate_selector").append($('<option value="' + cateList[i].key + '">' + cateList[i].name + '</option>'))
                 }
             });            
+            //加载指定文章信息
+            var postId = url.replace(/.*postId=(\d+)$/, "$1");
+            if(postId) {
+            	$.ajax({
+            		url: "/blog/getPostById",
+            		type: "get",
+            		dataType: "json",
+            		async: "true",
+            		data: {
+            			postId: postId
+            		},
+            		success: function(rsp) {
+            			if(rsp.err) {
+            				alert("获取文章信息失败");
+            			} else {
+            				var articleObj = rsp.data;
+							$('#post_title').val(articleObj.title);
+            				$('#post_tags').val(articleObj.tags.join(","));
+        					ueditor.setContent(articleObj.content);
+        					$('"#cate_selector option[value=' + articleObj.cate + ']"').attr('selected', 'true');
+            			}
+            		}
+            	});
+            } else {
+            	alert("文章不存在");
+            }    
         });
     })();
 

@@ -70,6 +70,7 @@
             }
             if (userInfo && userInfo.role == 'admin') {
                 $('#addpost_btn').css('display', 'block');
+                $('.span_atc_edit').css('display', 'block');
             }
             //加载分类信息
             loadCates(null);            

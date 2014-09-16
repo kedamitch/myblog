@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8" />
+	<meta name="baidu-site-verification" content="T0g94GlQv2" />
+	<title>肥飞のblog</title>
+	<meta name="keywords" content="技术博客,java,nodejs" />
 	<link href="/static/css/head.css" rel="stylesheet" type="text/css" />
 	<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="/static/js/jquery.tmpl.min.js"></script>
-	<meta name="baidu-site-verification" content="T0g94GlQv2" />
 	<!--<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101122967" data-redirecturi="http://drodo.net" charset="utf-8"></script>-->
 </head>
 <body>
@@ -212,8 +214,11 @@
 			    <span class="span_atc_tags">${article.tags}</span>
 				<span class="span_atc_author">
 					<a href="">${article.author}</a>
-				</span>	
+				</span>
 				<span class="span_atc_date">${article.date}</span>
+				<span class="span_atc_edit">
+					<a href="/blog/edit.html?postId=${article.id}">编辑</a>
+				</span>					
 				<span class="span_view_num">${article.viewCount}</span>
 				<span class="span_comments_num">
 					<a href="">${article.commentCount}</a>

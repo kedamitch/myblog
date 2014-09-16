@@ -96,6 +96,7 @@
             }
             if (userInfo && userInfo.role == 'admin') {
                 $('#addpost_btn').css('display', 'block');
+                $('.span_atc_edit').css('display', 'block');
             }
 
             var matchs = window.location.href.match(/.*[?&]cate=([^&]+).*/);
