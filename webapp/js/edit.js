@@ -101,8 +101,8 @@
 							$('#post_title').val(articleObj.title);
             				$('#post_tags').val(articleObj.tags.join(","));
 							window.ueditor = UE.getEditor('container');
-						    editor.addListener( 'ready', function( editor ) {
-						     	ueditor.setContent(articleObj.content);
+						    ueditor.addListener( 'ready', function(editor) {
+						     	editor.setContent(articleObj.content);
 						 	});            				
         					$('"#cate_selector option[value=' + articleObj.cate + ']"').attr('selected', 'true');
             			}
