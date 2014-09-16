@@ -24,7 +24,8 @@ h1 a			{color:white;}
 .div_atc_foot span	{font-size:13px;background-image:url("/static/image/icons.gif");background-repeat:no-repeat;padding:0px 20px;}
 .span_atc_author	{float:left;}
 .span_atc_author a	{text-decoration:none;color:#2970A6;}
-.span_atc_edit a    {text-decoration:none;color:#2970A6;display: none}
+.span_atc_edit		{display: none; background-position:0px -60px;float:left;}
+.span_atc_edit a    {text-decoration:none;color:#2970A6;}
 .span_atc_date		{background-position:0px -48px;float:left;}
 .span_atc_tags		{background-position:0px -400px;float:left;color:#999;}
 .span_view_num		{background-position:0px -96px;float:right;}
