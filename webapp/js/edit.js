@@ -104,7 +104,7 @@
 						    ueditor.ready(function() {
 						     	ueditor.setContent(articleObj.content);
 						 	});            				
-        					$('"#cate_selector option[value="' + articleObj.cate + '"]"').attr('selected', 'true');
+        					$('#cate_selector option[value="' + articleObj.cate + '"]').attr('selected', 'true');
             			}
             		}
             	});
