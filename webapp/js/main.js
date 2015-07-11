@@ -7,7 +7,7 @@
 
     var _userInfo;
 
-    //确保左右两个div等高	
+    //确保左右两个div等高   
     // var h1 = parseInt($('.div_left').css('height'));
     // var h2 = parseInt($('.div_right').css('height'));
     // var maxh = h1 > h2 ? h1 : h2;
@@ -35,12 +35,17 @@
     var loadPosts = (function() {
 
         var isFinish = false, //文章是否被拉完
+            isPulling = false,
             newestId = ''; //下次拉取的起点
 
         return function(count, cate, cb) {
             if (isFinish) {
                 return;
             }
+            if (isPulling) {
+                return;
+            }
+            isPulling = true;
 
             $.ajax({
                 url: '/blog/getPosts',
@@ -76,6 +81,7 @@
                         }).appendTo('#postlist');
                     }
                     cb();
+                    isPulling = false;
                 }
             });
         };
@@ -99,7 +105,7 @@
             }
 
             var matchs = window.location.href.match(/.*[?&]cate=([^&]+).*/);
-            if(matchs && matchs[1]) {
+            if (matchs && matchs[1]) {
                 var cate = matchs[1];
             }
 
@@ -110,6 +116,24 @@
                 if (userInfo && userInfo.role == 'admin') {
                     $('.span_atc_edit').css('display', 'block');
                 }
+            });
+
+            $(window).scroll(function(event) {
+                var marginBot = 0;
+                if (document.compatMode === "CSS1Compat") {
+                    marginBot = document.documentElement.scrollHeight - (document.documentElement.scrollTop + document.body.scrollTop) - document.documentElement.clientHeight;
+                } else {
+                    marginBot = document.body.scrollHeight - document.body.scrollTop - document.body.clientHeight;
+                }
+                if (marginBot <= 0) {
+                    //do something
+                    loadPosts(10, cate, function(err, total, posts) {
+                        if (userInfo && userInfo.role == 'admin') {
+                            $('.span_atc_edit').css('display', 'block');
+                        }
+                    });
+                }
+
             });
         });
     })();
