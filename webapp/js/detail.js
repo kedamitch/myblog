@@ -57,6 +57,21 @@
         });
     };
 
+    function addViewCount(postId) {
+        $.ajax({
+            url: '/blog/view',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                postId: postId
+            },
+            async: true,
+            success: function(rsp) {
+                console.info(rsp);
+            }
+        });            
+    }
+
     $('#addpost_btn').on('click', function() {
         window.location.href = '/blog/newPost.html';
     });
@@ -78,6 +93,8 @@
             //加载文章列表
             var url = window.location.href;
             var postId = url.replace(/.*postId=(\d+)$/, "$1");
+
+            addViewCount(postId);
 
             getPostById(postId, function() {
                 if (userInfo && userInfo.role == 'admin') {
