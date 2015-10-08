@@ -32,7 +32,7 @@ require('fatfei.provider.loader').initialize({
             "implementation": "fatfei.provider.routeengine",
             "settings": {
                 "registername": "onRegister",
-                "defaultPage": "/blog/index.html"
+                "defaultPage": "/blog/index.do"
             }
         }, {
             "name": "server",
