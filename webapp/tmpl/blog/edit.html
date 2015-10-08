@@ -16,7 +16,8 @@
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
 		})();
-	</script>	
+	</script>
+	<noscript id="categoryData">${category}</noscript>
 	<!--<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101122967" data-redirecturi="http://drodo.net" charset="utf-8"></script>-->
 </head>
 <body>
@@ -172,7 +173,7 @@
 	{{each(i, cate) cateList}}
 		<li {{if cate.iscur}}class="currentpage"{{/if}}>
 			<h2>
-				<a cate="${cate.key}" href="/blog/index.html?cate=${cate.key}">${cate.name}</a>
+				<a cate="${cate.key}" href="/blog/index.do?cate=${cate.key}">${cate.name}</a>
 			</h2>
 		</li>
 	{{/each}}

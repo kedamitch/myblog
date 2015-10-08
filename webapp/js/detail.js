@@ -35,26 +35,31 @@
 
     //加载指定类型的文章
     var getPostById = function(postId, cb) {
-        $.ajax({
-            url: '/blog/getPostById',
-            type: 'get',
-            dataType: 'json',
-            data: {
-                postId: postId
-            },
-            async: true,
-            success: function(rsp) {
-                if (rsp.err) {
-                    alert('获取文章失败，请刷新页面');
-                } else {
-                    var postobj = rsp.data;
-                    $('#article-tmpl').tmpl({
-                        posts: [postobj]
-                    }).appendTo('#postlist');
-                    cb();
-                }
-            }
-        });
+        // $.ajax({
+        //     url: '/blog/getPostById',
+        //     type: 'get',
+        //     dataType: 'json',
+        //     data: {
+        //         postId: postId
+        //     },
+        //     async: true,
+        //     success: function(rsp) {
+        //         if (rsp.err) {
+        //             alert('获取文章失败，请刷新页面');
+        //         } else {
+        //             var postobj = rsp.data;
+        //             $('#article-tmpl').tmpl({
+        //                 posts: [postobj]
+        //             }).appendTo('#postlist');
+        //             cb();
+        //         }
+        //     }
+        // });
+        var postData = JSON.parse($("#postData").text());
+        $('#article-tmpl').tmpl({
+            posts: [postobj]
+        }).appendTo('#postlist');
+        cb();
     };
 
     function addViewCount(postId) {

@@ -19,6 +19,9 @@
 		})();
 	</script>
 
+	<noscript id="categoryData">${category}</noscript>
+	<noscript>${articleList}</noscript>
+
 	<!--<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101122967" data-redirecturi="http://drodo.net" charset="utf-8"></script>-->
 </head>
 <body>
@@ -172,7 +175,7 @@
 	{{each(i, cate) cateList}}
 		<li {{if cate.iscur }}class="currentpage"{{/if}}>
 			<h2>
-				<a cate="${cate.key}" href="/blog/index.html?cate=${cate.key}">${cate.name}</a>
+				<a cate="${cate.key}" href="/blog/index.do?cate=${cate.key}">${cate.name}</a>
 			</h2>
 		</li>
 	{{/each}}
@@ -184,7 +187,7 @@
 			<div class="div_atc_name">
 			 	<input type="hidden" class="input_atc_id" value="${article.id}">
 				<h2>
-					<a href="/blog/detail.html?postId=${article.id}">${article.title}</a>
+					<a href="/blog/detail.do?postId=${article.id}">${article.title}</a>
 				</h2>
 			</div>	
 			<div class="div_atc_content" style="max-height:300px;overflow:hidden;">
@@ -197,7 +200,7 @@
 				</span>
 				<span class="span_atc_date">${article.date}</span>
 				<span class="span_atc_edit">
-					<a href="/blog/edit.html?postId=${article.id}">编辑</a>
+					<a href="/blog/edit.do?postId=${article.id}">编辑</a>
 				</span>					
 				<span class="span_view_num">${article.viewCount}</span>
 				<span class="span_comments_num">

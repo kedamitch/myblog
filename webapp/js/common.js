@@ -79,32 +79,47 @@
     );
 
     window.loadCates = function (cate, cb) {
-        $.ajax({
-            url: "/blog/getCate",
-            type: "get",
-            dataType: "json",
-            async: true,
-            success: function(rsp) {
-                if(rsp.err) {
-                    alert("获取分类信息失败");
-                } else {
-                    var cateList = rsp.data;
-                    for(var i = 0; i < cateList.length; i++) {
-                        if(cateList[i].key == cate) {
-                            cateList[i].iscur = true;
-                            $(".currentpage").attr("class", "");
-                            break;
-                        }
-                    }
-                    $("#cate-tmpl").tmpl({
-                        cateList: cateList
-                    }).appendTo('.ul_items');
-                    if(cb) {
-                        cb(cateList);
-                    }
-                }
+        // $.ajax({
+        //     url: "/blog/getCate",
+        //     type: "get",
+        //     dataType: "json",
+        //     async: true,
+        //     success: function(rsp) {
+        //         if(rsp.err) {
+        //             alert("获取分类信息失败");
+        //         } else {
+        //             var cateList = rsp.data;
+        //             for(var i = 0; i < cateList.length; i++) {
+        //                 if(cateList[i].key == cate) {
+        //                     cateList[i].iscur = true;
+        //                     $(".currentpage").attr("class", "");
+        //                     break;
+        //                 }
+        //             }
+        //             $("#cate-tmpl").tmpl({
+        //                 cateList: cateList
+        //             }).appendTo('.ul_items');
+        //             if(cb) {
+        //                 cb(cateList);
+        //             }
+        //         }
+        //     }
+        // });
+
+        var cateList = JSON.parse($("#categoryData").text());
+        for(var i = 0; i < cateList.length; i++) {
+            if(cateList[i].key == cate) {
+                cateList[i].iscur = true;
+                $(".currentpage").attr("class", "");
+                break;
             }
-        });
+        }
+        $("#cate-tmpl").tmpl({
+            cateList: cateList
+        }).appendTo('.ul_items');
+        if(cb) {
+            cb(cateList);
+        }        
     };    
 
     // var fixedRight = function(e) {

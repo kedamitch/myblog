@@ -47,14 +47,17 @@ require('fatfei.provider.loader').initialize({
         }, {
             "name": "blog",
             "implementation": "fatfei.api.blog",
-            "ref": ["dao", "user"]
+            "ref": ["dao", "user", "filehandler"]
         }, {
             "name": "user",
             "implementation": "fatfei.api.user",
             "ref": ["dao"]
         }, {
             "name": "filehandler",
-            "implementation": "fatfei.common.filehandler"
+            "implementation": "fatfei.common.filehandler",
+            "settings": {
+                tmplPath: require('path').dirname(module.filename) + '/webapp/tmpl'
+            }
         }, {
             "name": "staticSource",
             "implementation": "fatfei.module.staticfile",
