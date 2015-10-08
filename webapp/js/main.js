@@ -89,7 +89,7 @@
 
 
     $('#addpost_btn').on('click', function() {
-        window.location.href = '/blog/newPost.html';
+        window.location.href = '/blog/newPost.do';
     });
 
     //初始化页面，获取用户权限信息
