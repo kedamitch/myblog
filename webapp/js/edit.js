@@ -54,7 +54,7 @@
                     console.error(rsp.data);
                 } else {
                     alert('修改成功');
-                    window.location.href = '/blog/index.html';
+                    window.location.href = '/blog/index.do';
                 }
             }
         });
@@ -66,11 +66,11 @@
         validate(function(isValid, userInfo) {
             if (!isValid) {
                 alert('你没有权限发帖');
-                window.location.href = '/blog/index.html';
+                window.location.href = '/blog/index.do';
                 return;
             } else if (userInfo && userInfo.role !== 'admin') {
                 alert('你没有权限发帖');
-                window.location.href = '/blog/index.html';
+                window.location.href = '/blog/index.do';
                 return;
             }
 
