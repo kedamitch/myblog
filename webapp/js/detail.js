@@ -57,7 +57,7 @@
         // });
         var postData = JSON.parse($("#postData").text());
         $('#article-tmpl').tmpl({
-            posts: [postobj]
+            posts: [postData]
         }).appendTo('#postlist');
         cb();
     };
